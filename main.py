@@ -12,7 +12,7 @@ class FlatIterator:
         self.list = x_list
 
     def __iter__(self):
-        self.one_list = [*self.list[0], *self.list[1], *self.list[2]]
+        self.one_list = [item for el in self.list for item in el]
         self.cursor = -1
         return self
 
